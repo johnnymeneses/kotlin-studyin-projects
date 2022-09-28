@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.gmailrecyclerview.model.fakeEmails
+import com.mooveit.library.Fakeit
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -15,6 +16,8 @@ class MainActivity : AppCompatActivity() {
         recycler_view_main.adapter = EmailAdapter(fakeEmails())
         recycler_view_main.layoutManager = LinearLayoutManager(this)
 
+        //Inicializa o FakeInit
+        Fakeit.init()
 
         supportActionBar!!.hide()
     }

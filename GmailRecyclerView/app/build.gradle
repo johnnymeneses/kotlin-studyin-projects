@@ -4,6 +4,10 @@ plugins {
     id 'kotlin-android-extensions'
 }
 
+
+
+
+
 android {
     compileSdk 32
 
@@ -47,4 +51,9 @@ dependencies {
 
     // Card View
     implementation "androidx.cardview:cardview:1.0.0"
+
+
+    //In your module's build.gradle
+    implementation 'com.github.moove-it:fakeit:v0.5'
+
 }
