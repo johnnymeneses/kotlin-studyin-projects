@@ -1,5 +1,3 @@
 # kotlin-studyin-projects
 
-Editado no Windows
-
-Editado no Mac
+Repositório com projetos focados no aprendizado da linguagem Kotlin
