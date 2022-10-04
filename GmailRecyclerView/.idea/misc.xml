@@ -4,10 +4,15 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../../../../layout/custom_preview.xml" value="0.12041708711738984" />
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/cardview_bg.xml" value="0.111" />
         <entry key="app/src/main/res/drawable/circle.xml" value="0.159" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/email_item.xml" value="1.0" />
+        <entry key="app/src/main/res/drawable/ic_launcher.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_plus.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_star.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/email_item.xml" value="0.4950071326676177" />
       </map>
     </option>
   </component>

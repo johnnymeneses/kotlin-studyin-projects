@@ -22,7 +22,7 @@
         android:gravity="center"
         android:textSize="24sp"
         android:background="@drawable/circle"
-        android:text="F"/>
+        />
 
     <TextView
         android:id="@+id/txt_user"

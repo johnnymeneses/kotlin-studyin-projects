@@ -13,7 +13,7 @@ class EmailViewHolder (itemView: View) : RecyclerView.ViewHolder(itemView) {
         with(email){
             val hash = user.hashCode()
             itemView.txt_icon.text = user.first().toString()
-            itemView.txt_icon.background = itemView.oval(Color.rgb(hash, hash/2,0))
+            itemView.txt_icon.background = itemView.oval(Color.rgb(hash/2, hash/4,0))
 
             itemView.txt_user.text = user
             itemView.txt_subject.text = subject

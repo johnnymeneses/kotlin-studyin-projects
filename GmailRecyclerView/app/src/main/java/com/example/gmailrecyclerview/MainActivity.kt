@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.ItemTouchHelper.UP
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.gmailrecyclerview.adapter.EmailAdapter
+import com.example.gmailrecyclerview.model.Email
 import com.example.gmailrecyclerview.model.email
 import com.example.gmailrecyclerview.model.fakeEmails
 import com.mooveit.library.Fakeit
@@ -22,9 +23,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        adapter = EmailAdapter(fakeEmails())
-        recycler_view_main.adapter = adapter //= EmailAdapter(fakeEmails())
-        recycler_view_main.layoutManager = LinearLayoutManager(this)
+
+        carregaEmails()
+
+
+
+        fab.setOnClickListener(){
+            carregaEmails()
+        }
 
         supportActionBar!!.hide()
 
@@ -41,6 +47,12 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+
+fun carregaEmails(){
+    adapter = EmailAdapter(fakeEmails())
+    recycler_view_main.adapter = adapter //= EmailAdapter(fakeEmails())
+    recycler_view_main.layoutManager = LinearLayoutManager(this)
+}
 
 
     inner class ItemTouchHelper(dragDirs: Int, swipeDirs: Int) :
@@ -72,6 +84,9 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
+
+
 
 
 }

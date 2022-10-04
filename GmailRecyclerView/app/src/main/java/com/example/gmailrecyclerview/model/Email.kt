@@ -38,16 +38,23 @@ fun email(block: EmailBuilder.() -> Unit): Email = EmailBuilder().apply(block).b
 //fun fakeEmails() = listOf(
 fun fakeEmails() :MutableList<Email> = mutableListOf(
     email {
-        user = "Google"
-        subject = "Johnny, confirme as configurações da sua Conta do Goog"
+        user = "Netflix"
+        subject = "Johnny confirme as configurações da sua Conta do Goog"
         preview = "Agradecemos por se conectar ao Google no seu dispositivo Windows.\n" +
                 "Confirme se as configurações da sua Conta do Google ainda são ideais para você."
         date = "25 Set"
         stared = true
         unread = true
+    },email {
+        user = "PicPay"
+        subject = "Que tal uma graninha extra? 🤑"
+        preview = "Conte com a gente pra ter o controle das suas finanças, até mesmo na hora de pedir seu empréstimo com toda a segurança."
+        date = "15 Mai"
+        stared = false
+        unread = true
     },
     email {
-        user = "Udemy"
+        user = "Alura"
         subject = "🏃‍♀️A promoção acaba hoje! Cursos a partir de R$22,90 cada."
         preview = "Aprenda as habilidades mais recentes e progrida na sua carreira. Cursos a partir de R$22,90 cada"
         date = " 25 Jan"
@@ -62,14 +69,7 @@ fun fakeEmails() :MutableList<Email> = mutableListOf(
         stared = true
         unread = true
     },
-    email {
-        user = "PicPay"
-        subject = "Que tal uma graninha extra? 🤑"
-        preview = "Conte com a gente pra ter o controle das suas finanças, até mesmo na hora de pedir seu empréstimo com toda a segurança."
-        date = "15 Mai"
-        stared = false
-        unread = true
-    },
+
     email {
         user = "El Pais"
         subject = "¡Últimas horas! Seis meses de suscripción por solo 1 € al mes"
@@ -98,7 +98,7 @@ fun fakeEmails() :MutableList<Email> = mutableListOf(
     },
 
     email {
-        user = "Udacity"
+        user = "Alura"
         subject = "The end of summer calls for big savings."
         preview = "Celebrate the last days of sun with this limited time offer."
         date = "11 Abr"
@@ -117,7 +117,7 @@ fun fakeEmails() :MutableList<Email> = mutableListOf(
 
 
     email {
-        user = "Experimento"
+        user = "STB"
         subject = "EXPERIMENTO CONVIDA | Saiba tudo sobre estudar na Irlanda num super evento!"
         preview = "Você é nosso convidado para o evento exclusivo que o Consulado Geral da Irlanda e a Select Ireland prepararam."
         date = " 29 Fev"
