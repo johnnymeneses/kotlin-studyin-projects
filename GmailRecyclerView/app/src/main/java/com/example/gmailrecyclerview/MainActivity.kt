@@ -40,6 +40,8 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    
+
     inner class ItemTouchHelper(dragDirs: Int, swipeDirs: Int) :
         androidx.recyclerview.widget.ItemTouchHelper.SimpleCallback(dragDirs, swipeDirs) {
 
