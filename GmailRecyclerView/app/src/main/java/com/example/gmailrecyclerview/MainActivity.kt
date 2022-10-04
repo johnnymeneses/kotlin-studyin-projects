@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.ItemTouchHelper.UP
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.gmailrecyclerview.adapter.EmailAdapter
 import com.example.gmailrecyclerview.model.email
 import com.example.gmailrecyclerview.model.fakeEmails
 import com.mooveit.library.Fakeit
@@ -40,7 +41,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    
+
 
     inner class ItemTouchHelper(dragDirs: Int, swipeDirs: Int) :
         androidx.recyclerview.widget.ItemTouchHelper.SimpleCallback(dragDirs, swipeDirs) {
@@ -51,8 +52,8 @@ class MainActivity : AppCompatActivity() {
             viewHolder: RecyclerView.ViewHolder,
             target: RecyclerView.ViewHolder
         ): Boolean {
-            val from: Int = viewHolder.adapterPosition //Posição origem
-            val to: Int = target.adapterPosition //Posição Destino
+            val from: Int = viewHolder.bindingAdapterPosition //Posição origem
+            val to: Int = target.bindingAdapterPosition //Posição Destino
 
             Collections.swap(adapter.emails, from, to)
             adapter.notifyItemMoved(from, to)
@@ -62,8 +63,12 @@ class MainActivity : AppCompatActivity() {
 
         //Excluir
         override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
-            adapter.emails.removeAt(viewHolder.adapterPosition)
-            adapter.notifyItemRemoved(viewHolder.adapterPosition)
+//            adapter.emails.removeAt(viewHolder.adapterPosition)
+//            adapter.notifyItemRemoved(viewHolder.adapterPosition)
+
+            adapter.emails.removeAt(viewHolder.bindingAdapterPosition)
+            adapter.notifyItemRemoved(viewHolder.bindingAdapterPosition)
+
         }
 
     }
